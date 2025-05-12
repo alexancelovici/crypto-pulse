@@ -78,9 +78,7 @@ src/
 public/
 └── _redirects # Regla para SPA en Netlify
 
-yaml
-Copy
-Edit
+
 
 ---
 
