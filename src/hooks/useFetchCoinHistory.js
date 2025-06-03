@@ -46,6 +46,7 @@ const useFetchCoinHistory = (coinId, startDate, endDate) => {
       } catch (err) {
         console.error(err);
         setError(err.message || 'Error al obtener datos históricos.');
+        setHistoryData([]); // Clear previous data on error
       } finally {
         setLoading(false);
       }
