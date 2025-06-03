@@ -64,7 +64,9 @@ const CoinChartPage = () => {
       </div>
 
       {loading && <p className="text-center">Cargando datos...</p>}
-      {error && <p className="text-center text-red-500">Error al obtener datos históricos.</p>}
+      {error && (
+        <p className="text-center text-red-500">{error}</p>
+      )}
       {!loading && !error && chartData && <Line data={chartData} />}
     </div>
   );
