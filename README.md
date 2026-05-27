@@ -1,10 +1,12 @@
 # 💸 CryptoPulse
 
-**CryptoPulse** es una aplicación web construida con **React + Vite + TailwindCSS** que permite visualizar información de las criptomonedas más populares, incluyendo detalles actualizados y un gráfico histórico de precios.
+Live demo: https://effortless-panda-51cfeb.netlify.app
+
+**CryptoPulse** is a web application built with **React + Vite + TailwindCSS** that lets users view information about popular cryptocurrencies, including updated details and historical price charts.
 
 ---
 
-## 🚀 Tecnologías usadas
+## 🚀 Technologies Used
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
@@ -16,73 +18,73 @@
 
 ---
 
-## 🎯 Funcionalidades principales
+## 🎯 Main Features
 
-- 📈 Visualización de criptomonedas populares y su precio en tiempo real
-- 🪙 Página de detalle con descripción e imagen de cada moneda
-- 📊 Gráfico histórico interactivo con selección de rangos
-- 🔄 Refetch automático al entrar a la Home
-- 🚫 Manejo de errores con páginas amigables (ErrorBoundary)
-- 📱 Diseño responsive con TailwindCSS
-
----
-
-## 🧠 Aprendizajes destacados
-
-- Consumo de APIs con `axios`
-- Hooks personalizados (`useFetchCoins`, `useFetchCoinDetail`, `useFetchCoinHistory`)
-- Manejo de estados con `useState`, `useEffect`
-- Enrutamiento con `react-router-dom`
-- Visualización de datos con Chart.js
-- Manejo de errores con componentes de fallback
+- 📈 View popular cryptocurrencies and their real-time prices
+- 🪙 Detail page with each coin's description and image
+- 📊 Interactive historical chart with range selection
+- 🔄 Automatic refetch when entering the Home page
+- 🚫 Error handling with friendly pages through ErrorBoundary
+- 📱 Responsive design with TailwindCSS
 
 ---
 
-## 🛠 Instalación
+## 🧠 Key Learnings
 
-1. Clona el repositorio:
+- API consumption with `axios`
+- Custom hooks (`useFetchCoins`, `useFetchCoinDetail`, `useFetchCoinHistory`)
+- State management with `useState` and `useEffect`
+- Routing with `react-router-dom`
+- Data visualization with Chart.js
+- Error handling with fallback components
+
+---
+
+## 🛠 Installation
+
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/alexancelovici/crypto-pulse.git
-Instala las dependencias y ejecuta en local:
+   ```
 
-bash
-Copy
-Edit
-cd crypto-pulse
-npm install
-npm run dev
+2. Install dependencies and run locally:
+
+   ```bash
+   cd crypto-pulse
+   npm install
+   npm run dev
+   ```
 
 ---
 
-## 🔗 Despliegue
+## 🔗 Deployment
 
-El proyecto está desplegado con **Netlify** en la siguiente URL:
+The project is deployed with **Netlify** at the following URL:
 
 👉 [https://effortless-panda-51cfeb.netlify.app](https://effortless-panda-51cfeb.netlify.app)
 
-✅ Incluye soporte para Single Page Application (SPA) mediante archivo `_redirects`.
+✅ Includes Single Page Application (SPA) support through the `_redirects` file.
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
+```text
 src/
-├── components/ # Navbar y componentes reutilizables
-├── hooks/ # Hooks personalizados para datos
-├── pages/ # Vistas principales (Home, Detalle, Gráfico)
-├── router/ # Definición de rutas
-├── App.jsx # Componente principal
-└── main.jsx # Punto de entrada
+├── components/ # Navbar and reusable components
+├── hooks/ # Custom data hooks
+├── pages/ # Main views (Home, Detail, Chart)
+├── router/ # Route definitions
+├── App.jsx # Main component
+└── main.jsx # Entry point
 
 public/
-└── _redirects # Regla para SPA en Netlify
-
-
+└── _redirects # Netlify SPA rule
+```
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
-Proyecto desarrollado por [@alexancelovici](https://github.com/alexancelovici) como parte del Bootcamp Fullstack 💻
-
+Project developed by [@alexancelovici](https://github.com/alexancelovici) as part of the Fullstack Bootcamp 💻
