@@ -1,3 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --color-canvas: #0a0d14;
+  --color-surface: #10141d;
+  --color-sidebar: #0d111a;
+  --color-accent: #4c7ff7;
+  --color-success: #2fbf83;
+  --color-danger: #f0576b;
+  --color-muted: #5c6478;
+  --color-subtle: #8a93a6;
+}
+
+body {
+  @apply font-sans bg-canvas text-slate-100;
+}

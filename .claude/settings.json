@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat /tmp/crypto-pulse-dev.log; echo \"---\"; ps aux | grep -i vite | grep -v grep)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sf http://localhost:5173 -o /dev/null)",
+      "Bash(curl -sf http://localhost:5174 -o /dev/null)",
+      "Bash(kill 71535)",
+      "Bash(chromium-cli --session app)"
+    ]
+  }
+}
