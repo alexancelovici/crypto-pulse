@@ -1,90 +1,68 @@
-# 💸 CryptoPulse
+# CryptoPulse
 
-Live demo: https://effortless-panda-51cfeb.netlify.app
+A responsive cryptocurrency market dashboard built with React. CryptoPulse combines live CoinGecko market data, sortable asset views, sparklines, detailed price charts, and a persistent local watchlist in a terminal-inspired interface.
 
-**CryptoPulse** is a web application built with **React + Vite + TailwindCSS** that lets users view information about popular cryptocurrencies, including updated details and historical price charts.
+[Open the live application](https://effortless-panda-51cfeb.netlify.app)
 
----
+## Highlights
 
-## 🚀 Technologies Used
+- Live market data for leading cryptocurrencies
+- Sortable asset table with price movement and sparklines
+- Detailed coin views with selectable chart ranges
+- Watchlist persisted in the browser with `localStorage`
+- Loading and error states for external API requests
+- Responsive dashboard layout
+- SPA routing configured for Netlify
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [React Router DOM](https://reactrouter.com/)
-- [Axios](https://axios-http.com/)
-- [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://react-chartjs-2.js.org/)
-- [CoinGecko API](https://www.coingecko.com/en/api)
+## Tech stack
 
----
+- React 19
+- Vite
+- Tailwind CSS 4
+- React Router
+- Axios
+- Chart.js
+- CoinGecko API
+- Netlify
 
-## 🎯 Main Features
+## Run locally
 
-- 📈 View popular cryptocurrencies and their real-time prices
-- 🪙 Detail page with each coin's description and image
-- 📊 Interactive historical chart with range selection
-- 🔄 Automatic refetch when entering the Home page
-- 🚫 Error handling with friendly pages through ErrorBoundary
-- 📱 Responsive design with TailwindCSS
+Requirements: a current Node.js LTS release and npm.
 
----
+```bash
+git clone https://github.com/alexancelovici/crypto-pulse.git
+cd crypto-pulse
+npm install
+npm run dev
+```
 
-## 🧠 Key Learnings
+Open the local URL printed by Vite.
 
-- API consumption with `axios`
-- Custom hooks (`useFetchCoins`, `useFetchCoinDetail`, `useFetchCoinHistory`)
-- State management with `useState` and `useEffect`
-- Routing with `react-router-dom`
-- Data visualization with Chart.js
-- Error handling with fallback components
+## Quality checks
 
----
+```bash
+npm run lint
+npm run build
+```
 
-## 🛠 Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/alexancelovici/crypto-pulse.git
-   ```
-
-2. Install dependencies and run locally:
-
-   ```bash
-   cd crypto-pulse
-   npm install
-   npm run dev
-   ```
-
----
-
-## 🔗 Deployment
-
-The project is deployed with **Netlify** at the following URL:
-
-👉 [https://effortless-panda-51cfeb.netlify.app](https://effortless-panda-51cfeb.netlify.app)
-
-✅ Includes Single Page Application (SPA) support through the `_redirects` file.
-
----
-
-## 📁 Project Structure
+## Architecture
 
 ```text
 src/
-├── components/ # Navbar and reusable components
-├── hooks/ # Custom data hooks
-├── pages/ # Main views (Home, Detail, Chart)
-├── router/ # Route definitions
-├── App.jsx # Main component
-└── main.jsx # Entry point
-
-public/
-└── _redirects # Netlify SPA rule
+├── components/   # Shared interface components
+├── hooks/        # Market-data fetching and reusable state
+├── pages/        # Dashboard, watchlist, and asset detail views
+├── router/       # Client-side routes
+├── App.jsx
+└── main.jsx
 ```
 
----
+The application keeps network logic in custom hooks and UI behavior in focused React components. CoinGecko remains the source of truth for market information; availability and rate limits depend on its public API.
 
-## 👨‍💻 Author
+## Deployment
 
-Project developed by [@alexancelovici](https://github.com/alexancelovici) as part of the Fullstack Bootcamp 💻
+The production build is hosted on Netlify. The repository includes an SPA redirect rule so deep links resolve through the React application.
+
+## Author
+
+Built by [Alex Ancelovici](https://github.com/alexancelovici).
